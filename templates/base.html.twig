@@ -12,6 +12,19 @@
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <header>
+            {% block header %}
+            <ul>
+                <li><a href="{{ path('app_accueil') }}">Accueil</a></li>
+                <li><a href="{{ path('app_parcour_formation') }}">Parcour Formation</a></li>
+                <li><a href="{{ path('app_fablab')}}">FABLAB</a></li>
+                <li><a href="{{ path('app_services')}}">SERVICES</a></li>
+                <li><a href="https://wiki.clubmicrosaintpierre.fr/">Site Micro St Pierre</a></li>
+            </ul>
+            {% endblock %}
+        </header>  
+        {% block body %}
+        
+        {% endblock %}
     </body>
 </html>
