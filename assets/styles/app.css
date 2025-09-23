@@ -1,3 +1,43 @@
-body {
-    background-color: skyblue;
-}
+ 
+ body{
+    background-color:rgb(93, 229, 239) ;
+ }
+ 
+ /* Centrage et taille du carrousel */
+    #carouselExample {
+      max-width: 800px;
+    }
+
+    /* Redimensionnement des images */
+    .carousel-item img {
+      max-height: 400px;
+      object-fit: cover;
+      margin: auto;
+    }
+
+    /* Couleur des flèches */
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        filter: invert(1);
+    }
+
+    /* Couleur des indicateurs */
+    .carousel-indicators button {
+      background-color: black;
+    }
+    .carousel-indicators .active {
+      background-color: black;
+    }
+
+    /* explication sous l'image */
+    .carousel-caption {
+      position: static;    
+      margin-top: 20px;     
+      font-size: 1rem;
+      color: #333;
+    }
+
+   
+    .carousel-indicators {
+      margin-bottom: -20px; 
+    }

@@ -2,15 +2,88 @@
 
 {% block title %}LeFABLAB!{% endblock %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('style/css/app.css') }}">
+{% endblock %}
+
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>un Fablab c'est quoi ?</h1>
-    <P>Un Fablab (contraction de L'anglais fabrication Laboratory), Laboratoire de fabrication est un atelier de fabrication numérique ouvert a tous.Il est équipé de machines à commande numérique telle qu'une imprimante 3D, et/ou une graveuse laser et autres appareils d'usinage,fraisages, tours ext...</p>    
+<div class="container text-center my-4">
+    <div id="carouselExample" class="carousel slide mx-auto" data-bs-ride="carousel" data-bs-wrap="true" data-bs-interval="3000">
+      
+      <!-- Indicateurs -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 01"></button>
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="5" aria-label="Slide 6"></button>
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="6" aria-label="Slide 7"></button>
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="7" aria-label="Slide 8"></button>
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="8" aria-label="Slide 9"></button>
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="9" aria-label="Slide 10"></button>
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="10" aria-label="Slide 11"></button>
+      </div>
+
+      <!-- Slides -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="assets/images/Imprimante3D.jpg" class="img-thumbnail" alt="Imprimante 3D">
+            <div class="carousel-caption">Imprimante 3D en action</div>
+        </div>
+        <div class="carousel-item">
+            <img src="assets/images/fusion360.jpg" class="img-thumbnail" alt="Logiciel pour la 3D">
+            <div class="carousel-caption">Logiciel Fusion 360 pour la modélisation 3D</div>
+        </div>
+        <div class="carousel-item">
+            <img src="assets/images/prepatravail3D.jpg" class="img-thumbnail" alt="Schéma de pièce et mesure">
+            <div class="carousel-caption">Préparation d’un travail en 3D</div>
+        </div>
+        <div class="carousel-item">
+            <img src="assets/images/photooutil3D.jpg" class="img-thumbnail" alt="Photo d'outils 3D">
+            <div class="carousel-caption">Outils pour l’impression 3D</div>
+        </div>
+        <div class="carousel-item">
+            <img src="assets/images/logo-cura.jpg" class="img-thumbnail" alt="Logiciel de tranchage pour imprimante 3D">
+            <div class="carousel-caption">Logiciel Cura : tranchage 3D</div>
+        </div>
+        <div class="carousel-item">
+            <img src="assets/images/graveuseLaser_.jpg" class="img-thumbnail" alt="Graveuse laser au travail">
+            <div class="carousel-caption">Graveuse laser en fonctionnement</div>
+        </div>
+        <div class="carousel-item">
+            <img src="assets/images/inskape.jpeg" class="img-thumbnail" alt="Logiciel de dessins vectoriels pour graveuse laser">
+            <div class="carousel-caption">Inkscape pour la gravure laser</div>
+        </div>
+        <div class="carousel-item">
+            <img src="assets/images/arduino.jpg" class="img-thumbnail" alt="Carte de développement Arduino du club">
+            <div class="carousel-caption">Carte Arduino du club</div>
+        </div>
+        <div class="carousel-item">
+            <img src="assets/images/robotarduino.jpg" class="img-thumbnail" alt="Robot Arduino">
+            <div class="carousel-caption">Robot construit avec Arduino</div>
+        </div>
+        <div class="carousel-item">
+            <img src="assets/images/micro_bit.jpg" class="img-thumbnail" alt="Carte de développement micro:bit du club">
+            <div class="carousel-caption">Carte micro:bit pour l’apprentissage</div>
+        </div>
+        <div class="carousel-item">
+            <img src="assets/images/robotmicrobit.jpg" class="img-thumbnail" alt="Robot micro:bit">
+            <div class="carousel-caption">Robot basé sur micro:bit</div>
+        </div>
+      </div>
+
+      <!-- Contrôles -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Précédent</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Suivant</span>
+      </button>
+    </div>
 </div>
-
 {% endblock %}
