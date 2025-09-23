@@ -1,15 +1,38 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello AccueilController!{% endblock %}
+{% block title %}Acceuil
+!{% endblock %}
 
 {% block body %}
 <div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <h1>Bonjour, Bienvenue </h1>
+<div class="container text-left">
+  <div class="row">
+    <div class="col">
+     <a href="https://www.conseiller-numerique.gouv.fr/" target="_blank">
+      <img src="{{ asset('assets/images/ConseillerNumerique.jpg') }}" 
+           alt="Conseiller Numérique" 
+           class="img-fluid w-100" style="max-width:200px;">
+           </a>
+    </div>
+    <div class="col">
+      <a href="https://www.clubmicrosaintpierre.fr/" target="_blank"> 
+       <img src="{{ asset('assets/images/iconNumericAndCo.jpg') }}"  alt="Club Numeric and Co" class="img-fluid w-100" style="max-width:200px;">
+       </a>
+      
+    </div>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>C:/Users/Stagiaire/numericandco/src/Controller/AccueilController.php</code></li>
-        <li>Your template at <code>C:/Users/Stagiaire/numericandco/templates/accueil/index.html.twig</code></li>
-    </ul>
+    <!--image bouton pour aller sur le lien openpixl.fr-->
+    <div class="col">
+       <a href="https://www.openpixl.fr/" target="_blank">
+  <img src="{{ asset('assets/images/openpixl.jpg') }}"
+       alt="Entreprise OpenPixl"
+       style="max-width:200px; width:100%; display:block;">
+</a>
+    </div>
+  </div>
 </div>
+
+<div class="container"></div>
+
 {% endblock %}
