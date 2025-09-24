@@ -4,69 +4,79 @@
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
 
-        <!-- j'appel le Bootstrap que j'ai mis dans public/assets/css qui avait ete installé dans vendor/twbs-->
+        <!-- Bootstrap -->
         <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
 
-              
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+
         {% block stylesheets %}{% endblock %}
         {% block javascripts %}
             {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %}
     </head>
     <body>
-        <header>
+        <!-- HEADER -->
+        <header class="container-fluid p-0 m-0">
             {% block header %}
+              <!-- Navbar Bootstrap -->
+              <nav class="navbar navbar-expand-lg navbar-dark bg-dark w-100">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="{{ path('app_accueil') }}">Numeric and Co</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
 
-            <!-- Navbar Bootstrap -->
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-              <div class="container-fluid">
-                <a class="navbar-brand" href="{{ path('app_accueil') }}">Numeric and Co</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                      <a class="nav-link  text-success" href="{{ path('app_accueil') }}">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link  text-primary" href="{{ path('app_parcour_formation') }}">Parcour Formation</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link  text-info" href="{{ path('app_fablab') }}">FABLAB</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link  text-warning" href="https://www.conseiller-numerique.gouv.fr/" target="_blank">Services</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link text-light" href="https://wiki.clubmicrosaintpierre.fr/" target="_blank">Site Micro St Pierre</a>
-                    </li>
-                     <li class="nav-item">
-                      <a class="nav-link  text-info" href="{{ path('app_services') }}">Projet</a>
-                    </li>
-                  </ul>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                      <li class="nav-item">
+                        <a class="nav-link text-success" href="{{ path('app_accueil') }}">Accueil</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-primary" href="{{ path('app_parcour_formation') }}">Parcour Formation</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-info" href="{{ path('app_fablab') }}">FABLAB</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-warning" href="https://www.conseiller-numerique.gouv.fr/" target="_blank">Services</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-light" href="https://wiki.clubmicrosaintpierre.fr/" target="_blank">Site Micro St Pierre</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-info" href="{{ path('app_services') }}">Projet</a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
-            </nav>
-
+              </nav>
             {% endblock %}
         </header>  
 
-        {% block body %}
-        {% endblock %}
+        <!-- MAIN -->
+        <main class="container my-4">
+          {% block body %}
+          {% endblock %}
+        </main>
 
-        <footer class="bg-dark text-light text-center p-3 mt-4">
+        <!-- FOOTER -->
+        <footer class="container-fluid p-0 m-0">
             {% block footer %}
-           <p>&copy; {{ "now"|date("Y") }} - {{ "now"|date("d/m/Y") }}</p>
-           <p>Développé par <strong>Jeanfrançois Ledeunf et controllé par Mr Xavier Burke</strong></p>
-           <p>Dans le cadre du stage en entreprise de Numeric and co</p>
-
+            <div class="bg-dark text-light text-center py-3 m-0 w-100">
+              <p>&copy; {{ "now"|date("Y") }} - {{ "now"|date("d/m/Y") }}</p>
+              <p>  Développé par <strong>Jeanfrançois Ledeunf stagiaire de l'AFEC et contrôlé par Mr Xavier Burke</strong></p>
+              <p>  Dans le cadre du stage en entreprise de Numeric and co</p>
+            </div>
             {% endblock %}
         </footer>
 
-        <!-- j'appel le Bootstrap que j'ai mis dans public/assets/js quiqui vient de  vendor/twbs-->
+        <!-- Bootstrap JS -->
         <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
     </body>
 </html>
