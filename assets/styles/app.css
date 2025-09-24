@@ -2,6 +2,45 @@
  body{
     background-color:rgb(93, 229, 239) ;
  }
+   .encadre {
+    border: 5px solid #007bff;     /* Bordure bleue */
+    border-radius: 10px;             /* Coins arrondis */
+    padding: 15px;                   /* Espace intérieur */
+    font-size: 1.5rem;               /* Police agrandie */
+    background-color: #a0e0ed;     /* Fond gris clair */
+    max-width: 700px;                /* Largeur max */
+    margin: 20px auto;               /* Centrer le bloc */
+    text-align: justify;             /* Justifier le texte */
+  }
+
+  /* Style du titre */
+  .titre-projet {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #0056b3;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  /* Style du paragraphe encadré */
+  .encadre-projet {
+    border: 2px solid #007bff;   /* Bordure bleue */
+    border-radius: 12px;         /* Coins arrondis */
+    padding: 20px;               /* Espace intérieur */
+    font-size: 1.2rem;           /* Texte plus grand */
+    background: #95eedd;         /* Fond gris clair */
+    max-width: 800px;            /* Largeur max */
+    margin: 0 auto;              /* Centré horizontalement */
+    text-align: justify;         /* Justifier le texte */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Petite ombre élégante */
+  }
+
+  /* Conteneur global */
+  .projet-container {
+    margin: 40px auto;
+    text-align: center;
+  }
  
  /* Centrage et taille du carrousel */
     #carouselExample {
@@ -26,14 +65,14 @@
       background-color: black;
     }
     .carousel-indicators .active {
-      background-color: black;
+      background-color: rgb(8, 241, 32);
     }
 
     /* explication sous l'image */
     .carousel-caption {
       position: static;    
       margin-top: 20px;     
-      font-size: 1rem;
+      font-size: 1.5rem;
       color: #333;
     }
 
