@@ -1,38 +1,53 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Acceuil
-!{% endblock %}
+{% block title %}Accueil{% endblock %}
 
 {% block body %}
 <div class="example-wrapper">
-    <h1>Bonjour, Bienvenue </h1>
-<div class="container text-left">
-  <div class="row">
-    <div class="col">
-     <a href="https://www.conseiller-numerique.gouv.fr/" target="_blank">
-      <img src="{{ asset('assets/images/ConseillerNumerique.jpg') }}" 
-           alt="Conseiller Numérique" 
-           class="img-fluid w-100" style="max-width:200px;">
-           </a>
-    </div>
-    <div class="col">
-      <a href="https://www.clubmicrosaintpierre.fr/" target="_blank"> 
-       <img src="{{ asset('assets/images/iconNumericAndCo.jpg') }}"  alt="Club Numeric and Co" class="img-fluid w-100" style="max-width:200px;">
-       </a>
-      
-    </div>
+  
+  <h1 class="text-center text-white mb-5">Bonjour, Bienvenue</h1>
 
-    <!--image bouton pour aller sur le lien openpixl.fr-->
-    <div class="col">
-       <a href="https://www.openpixl.fr/" target="_blank">
-  <img src="{{ asset('assets/images/openpixl.jpg') }}"
-       alt="Entreprise OpenPixl"
-       style="max-width:200px; width:100%; display:block;">
-</a>
+  <div class="container text-left">
+    <div class="row">
+      
+      <!-- Lien vers Conseiller Numérique -->
+      <div class="col">
+        <a href="https://www.conseiller-numerique.gouv.fr/" target="_blank">
+          <img 
+            src="{{ asset('assets/images/ConseillerNumerique.jpg') }}" 
+            alt="Conseiller Numérique" 
+            class="img-fluid w-100" 
+            style="max-width: 200px;">
+        </a>
+      </div>
+
+      <!-- Lien vers Club Numeric and Co -->
+      <div class="col">
+        <a href="https://www.clubmicrosaintpierre.fr/" target="_blank">
+          <img 
+            src="{{ asset('assets/images/iconNumericAndCo.jpg') }}"  
+            alt="Club Numeric and Co" 
+            class="img-fluid w-100" 
+            style="max-width: 200px;">
+        </a>
+      </div>
+
+      <!-- Lien vers OpenPixl -->
+      <div class="col">
+        <a href="https://www.openpixl.fr/" target="_blank">
+          <img 
+            src="{{ asset('assets/images/openpixl.jpg') }}"
+            alt="Entreprise OpenPixl"
+            class="img-fluid w-100"
+            style="max-width: 200px;">
+        </a>
+      </div>
+
     </div>
   </div>
+
+  <div class="container">
+    <!-- Peut-être à supprimer ou compléter ? -->
+  </div>
 </div>
-
-<div class="container"></div>
-
 {% endblock %}

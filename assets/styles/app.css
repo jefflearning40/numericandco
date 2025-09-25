@@ -1,82 +1,95 @@
- 
- body{
-    background-color:rgb(93, 229, 239) ;
- }
-   .encadre {
-    border: 5px solid #007bff;     /* Bordure bleue */
-    border-radius: 10px;             /* Coins arrondis */
-    padding: 15px;                   /* Espace intérieur */
-    font-size: 1.5rem;               /* Police agrandie */
-    background-color: #a0e0ed;     /* Fond gris clair */
-    max-width: 700px;                /* Largeur max */
-    margin: 20px auto;               /* Centrer le bloc */
-    text-align: justify;             /* Justifier le texte */
-  }
+body {
+  background-image: url("/assets/images/imagefondpage.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+}
 
-  /* Style du titre */
-  .titre-projet {
-    text-align: center;
-    font-size: 2.5rem;
-    color: #0056b3;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
+/* Encadré principal */
+.encadre {
+  border: 5px solid rgb(246, 148, 241);
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 1.5rem;
+  color: white;  /* Correction ici */
+  background-color: #d5c3d528;  /* Fond semi-transparent */
+  max-width: 700px;
+  margin: 20px auto;
+  text-align: justify;
+}
 
-  /* Style du paragraphe encadré */
-  .encadre-projet {
-    border: 2px solid #007bff;   /* Bordure bleue */
-    border-radius: 12px;         /* Coins arrondis */
-    padding: 20px;               /* Espace intérieur */
-    font-size: 1.2rem;           /* Texte plus grand */
-    background: #95eedd;         /* Fond gris clair */
-    max-width: 800px;            /* Largeur max */
-    margin: 0 auto;              /* Centré horizontalement */
-    text-align: justify;         /* Justifier le texte */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Petite ombre élégante */
-  }
+.encadre h1 {
+  color: white;
+}
 
-  /* Conteneur global */
-  .projet-container {
-    margin: 40px auto;
-    text-align: center;
-  }
- 
- /* Centrage et taille du carrousel */
-    #carouselExample {
-      max-width: 800px;
-    }
+/* Style du titre principal */
+.titre-projet {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #0056b3;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
 
-    /* Redimensionnement des images */
-    .carousel-item img {
-      max-height: 400px;
-      object-fit: cover;
-      margin: auto;
-    }
+/* Encadré de description du projet */
+.encadre-projet {
+  border: 2px solid #f9a2fc;
+  border-radius: 12px;
+  padding: 20px;
+  font-size: 1.2rem;
+  background: #e6c0ea;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: justify;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-    /* Couleur des flèches */
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-        filter: invert(1);
-    }
+/* Conteneur global */
+.projet-container {
+  margin: 40px auto;
+  text-align: center;
+}
 
-    /* Couleur des indicateurs */
-    .carousel-indicators button {
-      background-color: black;
-    }
-    .carousel-indicators .active {
-      background-color: rgb(8, 241, 32);
-    }
+/* Centrage et taille du carrousel */
+#carouselExample {
+  max-width: 800px;
+  margin: 0 auto;
+}
 
-    /* explication sous l'image */
-    .carousel-caption {
-      position: static;    
-      margin-top: 20px;     
-      font-size: 1.5rem;
-      color: #333;
-    }
+/* Redimensionnement des images dans le carrousel */
+.carousel-item img {
+  max-height: 400px;
+  object-fit: cover;
+  margin: auto;
+}
 
-   
-    .carousel-indicators {
-      margin-bottom: -20px; 
-    }
+/* Couleur des flèches de navigation */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);  /* Rendre les flèches visibles sur fond sombre */
+}
+
+/* Couleur des indicateurs */
+.carousel-indicators button {
+  background-color: black;
+}
+
+.carousel-indicators .active {
+  background-color: rgb(8, 241, 32);
+}
+
+/* Légende sous les images */
+.carousel-caption {
+  position: static;
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+/* Position des indicateurs du carrousel */
+.carousel-indicators {
+  margin-bottom: -20px;
+}
