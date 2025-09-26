@@ -1,0 +1,23 @@
+/* Accordéon sombre et arrondi */
+.accordion.bg-dark {
+    border-radius: 1rem; /* arrondis plus doux */
+    overflow: hidden;   /* évite que les angles débordent */
+}
+
+/* Boutons de l’accordéon */
+.accordion-button.bg-secondary {
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    border: none;
+}
+
+/* Effet hover */
+.accordion-button.bg-secondary:hover {
+    background-color: #495057; /* gris plus sombre */
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* Texte et listes */
+.accordion-body ul li {
+    margin-bottom: 0.4rem;
+}

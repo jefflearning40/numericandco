@@ -1,29 +1,39 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ParcourFormationController!{% endblock %}
+{% block title %}Parcours Formation{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('styles/app2.css') }}">
+{% endblock %}
 
 {% block body %}
 
 <section class="container mt-4">
     <div class="row">
         <div class="col-md-12">
-            <h1 class="text-center mb-4">Parcours Formation</h1>
+            <h1 class="text-center mb-4 text-light">Parcours Formation</h1>
         </div>
     </div>
 
-    <div class="accordion accordion-flush" id="accordionParcours">
+    <!-- Accordéon sombre avec arrondis -->
+    <div class="accordion bg-dark text-light rounded-4 shadow" id="accordionParcours">
 
         <!-- Grand Débutant -->
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingDebutant">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseDebutant" aria-expanded="true" aria-controls="flush-collapseDebutant">
+        <div class="accordion-item bg-dark text-light border-0">
+            <h2 class="accordion-header" id="headingDebutant">
+                <button class="accordion-button bg-secondary text-white rounded-top-4" 
+                        type="button" data-bs-toggle="collapse" 
+                        data-bs-target="#collapseDebutant" 
+                        aria-expanded="true" aria-controls="collapseDebutant">
                     Grand débutant
                 </button>
             </h2>
-            <div id="flush-collapseDebutant" class="accordion-collapse collapse show" aria-labelledby="flush-headingDebutant" data-bs-parent="#accordionParcours">
+            <div id="collapseDebutant" class="accordion-collapse collapse show" 
+                 aria-labelledby="headingDebutant" data-bs-parent="#accordionParcours">
                 <div class="accordion-body">
                     <p>Rejoignez notre parcours dédié aux grands débutants en informatique, structuré en 8 séances interactives. Apprenez à votre rythme les bases essentielles...</p>
-                    <h5>Calendrier des sessions</h5>
+                    <h5 class="text-info">Calendrier des sessions</h5>
                     <ul>
                         <li>Session 1 | du 11 septembre au 13 novembre 2024</li>
                         <li>Session 2 | du 20 novembre 2024 au 22 janvier 2025</li>
@@ -35,16 +45,20 @@
         </div>
 
         <!-- Initiation -->
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingInitiation">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseInitiation" aria-expanded="false" aria-controls="flush-collapseInitiation">
+        <div class="accordion-item bg-dark text-light border-0">
+            <h2 class="accordion-header" id="headingInitiation">
+                <button class="accordion-button collapsed bg-secondary text-white" 
+                        type="button" data-bs-toggle="collapse" 
+                        data-bs-target="#collapseInitiation" 
+                        aria-expanded="false" aria-controls="collapseInitiation">
                     Initiation
                 </button>
             </h2>
-            <div id="flush-collapseInitiation" class="accordion-collapse collapse" aria-labelledby="flush-headingInitiation" data-bs-parent="#accordionParcours">
+            <div id="collapseInitiation" class="accordion-collapse collapse" 
+                 aria-labelledby="headingInitiation" data-bs-parent="#accordionParcours">
                 <div class="accordion-body">
                     <p>Participez à nos parcours d'initiation informatique, organisés les mardis et jeudis de 16h30 à 18h00. À travers 5 cycles thématiques...</p>
-                    <h5>Calendrier des cycles</h5>
+                    <h5 class="text-info">Calendrier des cycles</h5>
                     <ul>
                         <li>CYCLE 1 | du 11 septembre au 13 novembre 2024 | Apprenez à gérer votre ordinateur</li>
                         <li>CYCLE 2 | du 20 novembre 2024 au 22 janvier 2025</li>
@@ -57,16 +71,20 @@
         </div>
 
         <!-- Perfectionnement -->
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingPerfectionnement">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsePerfectionnement" aria-expanded="false" aria-controls="flush-collapsePerfectionnement">
+        <div class="accordion-item bg-dark text-light border-0">
+            <h2 class="accordion-header" id="headingPerfectionnement">
+                <button class="accordion-button collapsed bg-secondary text-white rounded-bottom-4" 
+                        type="button" data-bs-toggle="collapse" 
+                        data-bs-target="#collapsePerfectionnement" 
+                        aria-expanded="false" aria-controls="collapsePerfectionnement">
                     Perfectionnement
                 </button>
             </h2>
-            <div id="flush-collapsePerfectionnement" class="accordion-collapse collapse" aria-labelledby="flush-headingPerfectionnement" data-bs-parent="#accordionParcours">
+            <div id="collapsePerfectionnement" class="accordion-collapse collapse" 
+                 aria-labelledby="headingPerfectionnement" data-bs-parent="#accordionParcours">
                 <div class="accordion-body">
                     <p>Nos modules de perfectionnement, destinés à un public averti, se déroulent le mercredi soir de 18h00 à 19h30...</p>
-                    <h5>Calendrier des modules</h5>
+                    <h5 class="text-info">Calendrier des modules</h5>
                     <ul>
                         <li>Module Vidéo Débutant | du 18 mars au 8 avril 2025 (4 séances) | 18h00 à 19h30</li>
                     </ul>
